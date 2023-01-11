@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_fragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_text_window"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите номер карты"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:endIconDrawable="@android:drawable/ic_menu_search"
+        app:endIconMode="custom"
+        app:helperText="Enter the first digits of a card number (BIN/IIN)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bin_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="45717399" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bank_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BANK"
+        android:padding="15dp"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_text_window" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scheme_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SCHEME / NETWORK"
+        android:padding="15dp"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/bank_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/type_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="TYPE"
+        android:padding="15dp"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/scheme_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/brand_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BRAND"
+        android:padding="15dp"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/type_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/country_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="COUNTRY"
+        android:padding="15dp"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/brand_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/url_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="WEB URL"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/country_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/phone_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PHONE NUMBER"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/url_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/latitude_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="latitude"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/longitude_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="longitude"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/latitude_tv"
+        app:layout_constraintTop_toBottomOf="@+id/phone_tv" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_fragment_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_recent_history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
