@@ -27,7 +27,7 @@ class MainViewModels(private val repository: RepositoryBank) : ViewModel() {
         newStart?.cancel()
         newStart = viewModelScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
             val result = repository.observerBin(textNumber)
-            withContext(Dispatchers.Main) { {  }
+            withContext(Dispatchers.Main) {
                 _card.postValue(result)
             }
         }
