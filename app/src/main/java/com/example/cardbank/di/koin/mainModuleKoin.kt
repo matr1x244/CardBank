@@ -22,13 +22,13 @@ val mainModuleKoin = module {
     single {
         Retrofit.Builder()
             .baseUrl(apiUrl)
-            .addCallAdapterFactory(get())
-            .addConverterFactory(get())
+            .addCallAdapterFactory(get((named("rx_java_adapter"))))
+            .addConverterFactory(get((named("gson_converter"))))
             .build()
     }
 
-    factory<Converter.Factory> { GsonConverterFactory.create() }
-    factory<CallAdapter.Factory> { RxJava3CallAdapterFactory.create() }
+    factory<Converter.Factory>(named("gson_converter")) { GsonConverterFactory.create() }
+    factory<CallAdapter.Factory>(named("rx_java_adapter")) { RxJava3CallAdapterFactory.create() }
 
     viewModel(named("main_view_model")) { MainViewModels(get(named("bank_api"))) }
 }

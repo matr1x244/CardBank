@@ -10,5 +10,6 @@ import org.koin.dsl.module
 val roomKoinModule = module {
 
     single<RepositoryRoom>(named("room")) { RoomImpl() }
+
     viewModel(named("room_view_model")) { BankRoomViewModels(get(named("room"))) }
 }
