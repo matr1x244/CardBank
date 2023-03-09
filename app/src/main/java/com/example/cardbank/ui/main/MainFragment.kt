@@ -11,12 +11,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import com.example.cardbank.R
 import com.example.cardbank.databinding.FragmentMainBinding
 import com.example.cardbank.domain.data.models.viewmodels.MainViewModels
 import com.example.cardbank.ui.room.FragmentBankRoom
+import kotlinx.coroutines.CoroutineScope
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.qualifier.named
 
 
 class MainFragment : Fragment() {
@@ -28,7 +31,7 @@ class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: MainViewModels by viewModel()
+    private val viewModel: MainViewModels by viewModel(named("main_view_model"))
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

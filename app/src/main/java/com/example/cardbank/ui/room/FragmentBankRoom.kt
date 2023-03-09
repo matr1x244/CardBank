@@ -10,6 +10,7 @@ import com.example.cardbank.databinding.FragmentRoomBinding
 import com.example.cardbank.domain.data.models.viewmodels.BankRoomViewModels
 import com.example.cardbank.ui.room.recyclerview.RecyclerViewAdapterRoom
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.qualifier.named
 
 class FragmentBankRoom : Fragment() {
 
@@ -20,7 +21,7 @@ class FragmentBankRoom : Fragment() {
     private var _binding: FragmentRoomBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: BankRoomViewModels by viewModel()
+    private val viewModel: BankRoomViewModels by viewModel(named("room_view_model"))
 
     private val adapter = RecyclerViewAdapterRoom {
         viewModel.onShowListRoom()

@@ -3,7 +3,8 @@ package com.example.cardbank
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import com.example.cardbank.di.koin.appModuleKoin
+import com.example.cardbank.di.koin.mainModuleKoin
+import com.example.cardbank.di.koin.roomKoinModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -17,7 +18,7 @@ class App : Application() {
         startKoin {
             androidLogger()
             androidContext(this@App)
-            modules(appModuleKoin)
+            modules(mainModuleKoin,roomKoinModule)
         }
     }
 

@@ -9,6 +9,7 @@ import com.example.cardbank.domain.data.models.RepositoryBank
 import com.example.cardbank.domain.data.models.base.Bank
 import com.example.cardbank.domain.data.models.base.BankBIN
 import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.flow
 
 class MainViewModels(private val repository: RepositoryBank) : ViewModel() {
 
@@ -26,7 +27,7 @@ class MainViewModels(private val repository: RepositoryBank) : ViewModel() {
         newStart?.cancel()
         newStart = viewModelScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
             val result = repository.observerBin(textNumber)
-            withContext(Dispatchers.Main) {
+            withContext(Dispatchers.Main) { {  }
                 _card.postValue(result)
             }
         }
