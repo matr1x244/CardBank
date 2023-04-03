@@ -1,4 +1,4 @@
-package com.example.cardbank.domain.data.models.room
+package com.example.cardbank.data.local.room
 
 import com.example.cardbank.domain.data.models.base.Bank
 

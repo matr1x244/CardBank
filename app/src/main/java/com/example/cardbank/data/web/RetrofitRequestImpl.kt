@@ -3,8 +3,8 @@ package com.example.cardbank.data.web
 import com.example.cardbank.domain.data.models.RepositoryBank
 import com.example.cardbank.domain.data.models.base.Bank
 import com.example.cardbank.domain.data.models.base.BankBIN
-import com.example.cardbank.domain.data.models.room.DataBaseBank
-import com.example.cardbank.domain.data.models.room.HistoryBank
+import com.example.cardbank.data.local.room.DataBaseBank
+import com.example.cardbank.data.local.room.HistoryBank
 
 class RetrofitRequestImpl(private val api: BinApi) : RepositoryBank {
 

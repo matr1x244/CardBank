@@ -1,4 +1,4 @@
-package com.example.cardbank.domain.data.models.room
+package com.example.cardbank.data.local.room
 
 import androidx.room.Dao
 import androidx.room.Insert

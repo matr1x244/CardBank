@@ -1,7 +1,7 @@
 package com.example.cardbank.di.koin
 
-import com.example.cardbank.domain.data.models.room.RepositoryRoom
-import com.example.cardbank.domain.data.models.room.RoomImpl
+import com.example.cardbank.data.local.room.RepositoryRoom
+import com.example.cardbank.data.local.room.RoomImpl
 import com.example.cardbank.domain.data.models.viewmodels.BankRoomViewModels
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named

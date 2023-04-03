@@ -1,9 +1,7 @@
-package com.example.cardbank.domain.data.models.room
+package com.example.cardbank.data.local.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.cardbank.domain.data.models.base.Bank
-import com.example.cardbank.domain.data.models.base.Country
 
 @Entity(tableName = "bank_table")
 data class HistoryBank(

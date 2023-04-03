@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cardbank.domain.data.models.base.Bank
-import com.example.cardbank.domain.data.models.room.RepositoryRoom
+import com.example.cardbank.data.local.room.RepositoryRoom
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

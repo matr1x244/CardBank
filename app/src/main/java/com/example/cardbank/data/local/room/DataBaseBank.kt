@@ -1,9 +1,7 @@
-package com.example.cardbank.domain.data.models.room
+package com.example.cardbank.data.local.room
 
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.cardbank.App
 
 @androidx.room.Database(
